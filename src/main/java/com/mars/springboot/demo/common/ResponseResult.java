@@ -37,4 +37,12 @@ public class ResponseResult<T> {
                 .timestamp(System.currentTimeMillis())
                 .build();
     }
+
+    public static <T> ResponseResult<T> validateError(String msg) {
+        return ResponseResult.<T>builder()
+                .eMsg(msg)
+                .eCode(ResponseStatus.VALIDATE_ERROR.getCode())
+                .timestamp(System.currentTimeMillis())
+                .build();
+    }
 }

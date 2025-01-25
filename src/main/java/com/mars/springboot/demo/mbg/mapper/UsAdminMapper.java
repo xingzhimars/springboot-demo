@@ -3,8 +3,6 @@ package com.mars.springboot.demo.mbg.mapper;
 import com.mars.springboot.demo.mbg.entity.UsAdmin;
 import com.mars.springboot.demo.mbg.entity.UsAdminExample;
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 public interface UsAdminMapper {

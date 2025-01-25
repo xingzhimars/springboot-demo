@@ -14,3 +14,17 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+
+springfox:
+  documentation:
+    enabled: true
+    open-api:
+      enabled: true
+    swagger-ui:
+      enabled: true
+
+jwt:
+  tokenHeader: Authorization
+  #  secret: springboot-demo-secret
+  expire: 3600
+  tokenPrefix: Bearer
