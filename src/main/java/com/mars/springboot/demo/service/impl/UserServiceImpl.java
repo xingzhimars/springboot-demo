@@ -1,6 +1,6 @@
 package com.mars.springboot.demo.service.impl;
 
-import com.mars.springboot.demo.dao.UserRepository;
+import com.mars.springboot.demo.dao.v1.UserRepository;
 import com.mars.springboot.demo.entity.User;
 import com.mars.springboot.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
