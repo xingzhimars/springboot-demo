@@ -1,5 +1,6 @@
 package com.mars.springboot.demo.controller;
 
+import com.mars.springboot.demo.common.ResponseResult;
 import com.mars.springboot.demo.entity.User;
 import com.mars.springboot.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,14 +21,14 @@ public class UserController {
 
 
     @RequestMapping("add")
-    public User add(User user) {
+    public ResponseResult<User> add(User user) {
         userService.addUser(user);
-        return user;
+        return ResponseResult.success(user);
     }
 
     @RequestMapping("list")
-    public List<User> list() {
-        return userService.list();
+    public ResponseResult<List<User>> list() {
+        return ResponseResult.success(userService.list());
     }
 
 }
