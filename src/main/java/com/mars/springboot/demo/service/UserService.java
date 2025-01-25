@@ -1,6 +1,7 @@
 package com.mars.springboot.demo.service;
 
-import com.mars.springboot.demo.entity.User;
+import com.mars.springboot.demo.dto.UsAdminParam;
+import com.mars.springboot.demo.mbg.entity.UsAdmin;
 
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface UserService {
 
-    void addUser(User user);
+    void addUser(UsAdminParam param);
 
-    List<User> list();
+    List<UsAdmin> list();
 }

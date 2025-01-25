@@ -1,22 +1,6 @@
 server:
-  port: 8081
+  port: 8080
 
 spring:
-  datasource:
-    data: classpath:db/data/sql
-    driverClassName: org.h2.Driver
-    password: sa
-    platform: h2
-    schema: classpath:db/schema.sql
-    url: jdbc:h2:mem:dbtest
-    username: sa
-  h2:
-    console:
-      enabled: true
-      path: /h2
-      settings:
-        web-allow-others: true
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  profiles:
+    active: dev
