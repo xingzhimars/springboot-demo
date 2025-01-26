@@ -4,6 +4,7 @@ import com.mars.springboot.demo.common.ResponseResult;
 import com.mars.springboot.demo.dto.UsAdminLoginParam;
 import com.mars.springboot.demo.dto.UsAdminParam;
 import com.mars.springboot.demo.mbg.entity.UsAdmin;
+import com.mars.springboot.demo.service.RedisService;
 import com.mars.springboot.demo.service.UsAdminService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -37,6 +38,9 @@ public class UsAdminController {
     @Autowired
     private UsAdminService usAdminService;
 
+//    @Autowired
+//    private RedisService<String> redisService;
+
     @ApiOperation(value = "用户注册")
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     @ResponseBody
@@ -57,6 +61,10 @@ public class UsAdminController {
         if (token == null) {
             return ResponseResult.validateError("username or password error");
         }
+
+//        String key = "token::" + param.getUsername();
+//        redisService.set(key, token);
+
         Map<String, String> map = new HashMap<>();
         map.put("token", token);
         map.put("tokenPrefix", tokenPrefix);
